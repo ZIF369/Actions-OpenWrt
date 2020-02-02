@@ -2,8 +2,9 @@
 #=================================================
 # Description: DIY script
 # Lisence: MIT
-# Author: P3TERX
-# Blog: https://p3terx.com
+# Author: ZIF369
 #=================================================
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/10.10.10.10/g' package/base-files/files/bin/config_generate
+# Modify Firmware Version
+sed -i 's/<%=pcdata(ver.distname)%> <%=pcdata(ver.distversion)%>/<%=pcdata(ver.distname)%> <%=pcdata(ver.distversion)%> <%:compiled by ZIF%>/g' /package/lean/autocore/files/index.htm
